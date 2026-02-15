@@ -1,0 +1,13 @@
+---
+- name: Single task playbook
+  hosts: localhost
+  tasks:
+    - name: Call test_module
+      my_own_module:
+        path: /tmp/test.txt
+        content: "Привет, мир!"
+      register: result
+
+    - name: Show result
+      debug:
+        var: result
