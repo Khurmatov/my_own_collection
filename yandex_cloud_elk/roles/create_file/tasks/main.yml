@@ -1,0 +1,16 @@
+---
+- name: Создать файл с помощью модуля
+  my_own_namespace.yandex_cloud_elk.create_file:
+    path: "{{ create_file_path }}"
+    content: "{{ create_file_content }}"
+    owner: "{{ create_file_owner | default(omit) }}"
+    group: "{{ create_file_group | default(omit) }}"
+    mode: "{{ create_file_mode | default(omit) }}"
+    force: "{{ create_file_force }}"
+    backup: "{{ create_file_backup }}"
+  register: result
+
+- name: Вывести результат
+  debug:
+    var: result
+  when: debug | default(false)

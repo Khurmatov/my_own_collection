@@ -1,0 +1,9 @@
+---
+# Параметры по умолчанию для роли create_file
+create_file_path: "/tmp/role_default_file.txt"
+create_file_content: "Файл создан через роль create_file\nВремя: {{ ansible_date_time.iso8601 }}"
+create_file_owner: "{{ ansible_user_id | default(omit) }}"
+create_file_group: "{{ ansible_user_id | default(omit) }}"
+create_file_mode: "0644"
+create_file_force: true
+create_file_backup: false

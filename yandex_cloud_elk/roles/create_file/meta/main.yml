@@ -1,0 +1,11 @@
+---
+galaxy_info:
+  author: Your Name
+  description: Role for creating files
+  license: GPL-3.0-or-later
+  min_ansible_version: 2.9
+  platforms:
+    - name: Generic
+      versions:
+        - all
+dependencies: []
